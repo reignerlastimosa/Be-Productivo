@@ -1,9 +1,11 @@
 import Navbar from "../components/Navbar";
 import Kitty from "./kitty/kitty.jpg";
 import { Link } from "react-router-dom";
+
 const About = ({darkMode, setDarkMode ,toggle,setToggle}) =>{
     return(
         <div className={`${darkMode ? 'dark-mode' :'light-mode'}`}>
+            
 
             <div className="container">
             <Navbar setDarkMode={setDarkMode} toggle={toggle} setToggle={setToggle}/>

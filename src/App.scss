@@ -1,5 +1,6 @@
 
 
+
 body {
 	margin: 0;
 	overflow: hidden;
@@ -7,6 +8,7 @@ body {
 		'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
 		'Droid Sans', 'Helvetica Neue', sans-serif;
 
+		background-color: red;
 		
 		
 }
@@ -62,7 +64,7 @@ img{
 .star-5{
 	position:absolute;
 	color:white;
-	left:700px;
+	left:200px;
 	bottom:100px;
 }
 
@@ -282,6 +284,8 @@ h1{
 
 .dark-mode {
 
+	
+
 	.credits{
 		
 		color:white;
@@ -390,8 +394,13 @@ h1{
 	}
 	
 }
+.dark-mode h1 {
+	color: white;
+}
 
 .light-mode{
+
+	
 
 	.credits{
 		
@@ -455,9 +464,7 @@ h1{
 		display:none;
 	}
 }
-.dark-mode h1 {
-	color: white;
-}
+
 .container {
 	width:100%;
 	display:flex;
@@ -550,7 +557,7 @@ h1{
 		margin-top:50px;
 		width:100%;
 		text-align: center;
-
+		margin-bottom:20px;
 		.completed{
 			text-decoration: line-through;
 			color:green;
@@ -600,13 +607,15 @@ h1{
 	
 	display: grid;
 	grid-gap: 1rem;
-	grid-template-columns: repeat(
-		auto-fill,
-		minmax(250px, 1fr)
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)
 	);
+
+
+	margin-bottom:30px;
 }
 
 .note.new {
+	
 	background-color:rgb(154, 226, 239);
 }
 
@@ -855,7 +864,25 @@ textarea:focus {
 			font-size:25px !important;
 		}
 	}
+
 	
 
+	.note-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: column;
+		text-align: center;
+	}
+	
+	.notes-list {
+	
+		
+		grid-template-columns: repeat(auto-fill,
+			minmax(50%, 1fr)
+		);
+		
+		
+	}
 	
   }
