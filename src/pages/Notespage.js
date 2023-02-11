@@ -15,11 +15,7 @@ const Notespage = ({darkMode, setDarkMode ,toggle,setToggle}) => {
 	const [searchText, setSearchText] = useState('');
 
 	const [notes, setNotes] = useState([
-		{
-			id: '',
-			text: '',
-			date: '',
-		},
+		
 	]);
 
 	useEffect(() => {
