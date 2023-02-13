@@ -23,16 +23,25 @@ const Schedule = ({title,time,day, sched, schedule, setSchedule, }) =>{
   
    const editedSchedule = (id) =>{
 
-            const updatedSchedule = [...schedule].map((sas)=>{
-                if(sas.id === id){
-                    sas.title = editTitle;
-                    sas.time = editTime;
-                }
-                return sas;
-            })
-            setSchedule(updatedSchedule);
-            
-            setEdit((a)=> !a);
+   
+    if(editTitle ===""){
+        alert("Please type your schedule");
+    } else if(editTime === "") {
+        alert("Please choose the time for your schedule");
+    }else{
+        const updatedSchedule = [...schedule].map((sas)=>{
+            if(sas.id === id){
+                sas.title = editTitle;
+                sas.time = editTime;
+            }
+            return sas;
+        })
+        setSchedule(updatedSchedule);
+        
+        setEdit((a)=> !a);
+    }
+
+          
    }
 
 
