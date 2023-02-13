@@ -15,7 +15,7 @@ function Schedule({darkMode, setDarkMode ,toggle,setToggle}) {
   const[inputDay,setInputDay] =useState("");
   
   useEffect(() => {
-		const savedSchedule = JSON.parse(localStorage.getItem('notes')
+		const savedSchedule = JSON.parse(localStorage.getItem('schedule')
 		);
 
 		if (savedSchedule) {
@@ -24,7 +24,7 @@ function Schedule({darkMode, setDarkMode ,toggle,setToggle}) {
 	}, []);
 
 	useEffect(() => {
-		localStorage.setItem( 'notes', JSON.stringify(schedule));
+		localStorage.setItem( 'schedule', JSON.stringify(schedule));
 	}, [schedule]);
 
 
